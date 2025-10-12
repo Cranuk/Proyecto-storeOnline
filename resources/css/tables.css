@@ -1,0 +1,47 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+th {
+    padding: 10px;
+    color: var(--text-color-th);
+    font-weight: 400;
+}
+
+td,
+td i {
+    color: var(--text-color-input);
+}
+
+thead tr {
+    background-color: var(--background-table-color);
+    text-align: center;
+    border-bottom: 2px solid var(--text-color);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--background-row-table1);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--background-row-table2);
+}
+
+.alert-amount {
+    display: inline-block;
+}
+
+i.alert-amount {
+    color: var(--icon-color-alert);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+i.alert-offer {
+    color: var(--background-icon-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+}

@@ -1,0 +1,72 @@
+.dashboard {
+    padding: 10px;
+    transition: var(--tran-05);
+    width: 100%;
+}
+
+.dash-content .title {
+    display: flex;
+}
+
+.dash-content .title i {
+    position: relative;
+    height: 35px;
+    width: 35px;
+    background-color: var(--background-icon-color);
+    border-radius: 6px;
+    color: var(--icon-color-title);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.dash-content .title .text {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
+.dash-content .boxes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.dash-content .boxes .box {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: var(--box1-color);
+    transition: var(--tran-05);
+}
+
+.boxes .box i {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.boxes .box .text,
+.boxes .box .number {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.boxes .box.box1,
+.boxes .box.box2,
+.boxes .box.box3 {
+    width: 20%;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.boxes .box.box2 {
+    background-color: var(--box2-color);
+}
+
+.boxes .box.box3 {
+    background-color: var(--box3-color);
+}

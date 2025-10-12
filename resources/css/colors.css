@@ -1,0 +1,61 @@
+:root {
+    /* == Background-color == */
+    --background-general: #faf9f9;
+    --background-footer: #333333;
+    --background-icon-color: #282C34;
+    --background-table-color: #282C34;
+    --background-row-table1: #c8c9cd;
+    --background-row-table2: #e3e3e6;
+    --box1-color: #e1e5f2;
+    --box2-color: #ef233c;
+    --box3-color: #1e88e5;
+
+    /* ===== Text-color =====*/
+    --text-color: #282C34;
+    --text-color-hover: #1e88e5;
+    --text-color-th: #f9f7f3;
+    --text-color-input: #282C34;
+    --text-color-icon: #707070;
+    --text-color-footer: #f9f7f3;
+
+    /* === Icon-color === */
+    --icon-color-title: #f9f7f3;
+    --icon-color-panel: #282C34;
+    --icon-color-link: #ffb200;
+    --icon-color-alert: #780000;
+
+    /* === Border-color === */
+    --border-color: #282C34;
+    --border-shadow: rgba(0, 0, 0, 0.1);
+
+    /* == Switch-color */
+    --toggle-color: #707070;
+
+    /* ====== Transition ====== */
+    --tran-05: all 0.5s ease;
+    --tran-03: all 0.3s ease;
+}
+
+body.dark {
+    /* == Background-color == */
+    --background-general: #242526;
+    --box1-color: #707070;
+    --box2-color: #780000;
+    --box3-color: #0d47a1;
+
+    /* ===== Text-color =====*/
+    --text-color: #f9f7f3;
+    --text-color-icon: #f9f7f3;
+
+    /* === Border-color === */
+    --border-color: #f9f7f3;
+    --border-shadow: rgba(255, 255, 255, 0.1);
+
+    /* === Icon-color === */
+    --icon-color-title: #f9f7f3;
+    --icon-color-panel: #f9f7f3;
+    --icon-color-link: #ffb200;
+
+    /* == Switch-color */
+    --toggle-color: #f9f7f3;
+}
