@@ -38,16 +38,18 @@
                 <td>@formatCurrency($offer->price)</td>
                 <td>@formatAmount($offer->amount_discount, $offer->type_unit)</td>
                 <td>
-                    <a href="{{ route('offers.edit', ['id'=>$offer->id]) }}">
-                        <i class='bx bxs-edit-alt icon-small'></i>
-                    </a>
-                    <form action="{{ route('offers.delete', ['id'=>$offer->id]) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="delete-button" title="Eliminar medio de pago">
-                            <i class='bx bxs-trash-alt icon-small'></i>
-                        </button>
-                    </form>
+                    <div class="tools">
+                        <a href="{{ route('offers.edit', ['id'=>$offer->id]) }}">
+                            <i class='bx bxs-edit-alt icon-small'></i>
+                        </a>
+                        <form action="{{ route('offers.delete', ['id'=>$offer->id]) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="delete-button" title="Eliminar medio de pago">
+                                <i class='bx bxs-trash-alt icon-small'></i>
+                            </button>
+                        </form>
+                    </div>
                 </td>
             </tr>
             @endforeach

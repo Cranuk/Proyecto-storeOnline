@@ -27,6 +27,11 @@ A continuación se detallan todos los pasos necesarios para levantar el entorno 
 git clone https://github.com/Cranuk/StoreSalesManager.git
 cd StoreOnline
 ```
+### Copiar y configurar el archivo docker para crear los contenedores
+
+```
+cp docker-compose.example.yml docker-compose.yml
+```
 
 ### Copiar y configurar el archivo de entorno
 

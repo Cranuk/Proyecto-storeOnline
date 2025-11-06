@@ -104,6 +104,14 @@ ul {
     flex-direction: row;
     justify-content: center;
     gap: 20px;
+
+    & a {
+        background-color: var(--background-icon-color);
+    }
+
+    & input {
+        background-color: var(--background-icon-color);
+    }
 }
 
 .buttons {
@@ -116,46 +124,6 @@ ul {
     text-align: center;
     border: none;
     transition: box-shadow 0.3s;
-}
-
-.button-red {
-    background-color: #ff5e5b;
-}
-
-.button-red:hover {
-    box-shadow: 0 5px 15px rgba(209, 207, 207, 0.5);
-}
-
-.button-lightBlue {
-    background-color: #3581B8;
-}
-
-.button-lightBlue:hover {
-    box-shadow: 0 5px 15px rgba(209, 207, 207, 0.5);
-}
-
-.button-yellow {
-    background-color: #f4b860;
-}
-
-.button-yellow:hover {
-    box-shadow: 0 5px 15px rgba(209, 207, 207, 0.5);
-}
-
-.button-orange {
-    background-color: #EB5E28;
-}
-
-.button-orange:hover {
-    box-shadow: 0 5px 15px rgba(209, 207, 207, 0.5);
-}
-
-.button-green {
-    background-color: #588157;
-}
-
-.button-green:hover {
-    box-shadow: 0 5px 15px rgba(209, 207, 207, 0.5);
 }
 
 .header-page {

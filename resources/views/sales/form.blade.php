@@ -55,9 +55,9 @@
     </div>
 
     <div class="button-box">
-        <a href="{{ route('sales') }}" class="buttons button-orange" title="Volver">
+        <a href="{{ route('sales') }}" class="buttons" title="Volver">
             <i class='bx bx-arrow-back icon-small'></i>
         </a>
-        <input type="submit" value="Guardar" class="buttons button-green">
+        <input type="submit" value="Guardar" class="buttons">
     </div>
 </form>

@@ -22,39 +22,64 @@ Route::get('/offers', [PanelController::class, 'offers'])->name('offers');
 Route::get('/paymentMethod', [PanelController::class, 'paymentMethod'])->name('paymentMethods');
 
 // ANCHOR: rutas para metodos de pago
-Route::get('/paymentMethod/create', [PaymentMethodController::class, 'create'])->name('paymentMethods.create');
-Route::get('/paymentMethod/edit/{id}', [PaymentMethodController::class, 'edit'])->name('paymentMethods.edit');
-Route::delete('/paymentMethod/delete/{id}', [PaymentMethodController::class, 'delete'])->name('paymentMethods.delete');
-Route::post('/paymentMethod/save', [PaymentMethodController::class, 'save'])->name('paymentMethods.save');
-Route::post('/paymentMethod/update', [PaymentMethodController::class, 'update'])->name('paymentMethods.update');
+Route::prefix('paymentMethod')
+    ->name('paymentMethods.')
+    ->controller(PaymentMethodController::class)
+    ->group(function () {
+        Route::get('create', 'create')->name('create');
+        Route::get('edit/{id}', 'edit')->name('edit');
+        Route::delete('delete/{id}', 'delete')->name('delete');
+        Route::post('save', 'save')->name('save');
+        Route::post('update', 'update')->name('update');
+    });
 
 // ANCHOR: rutas para los productos
-Route::get('/product/create', [ProductController::class, 'create'])->name('products.create');
-Route::get('/product/edit/{id}', [ProductController::class, 'edit'])->name('products.edit');
-Route::delete('/product/delete/{id}', [ProductController::class, 'delete'])->name('products.delete');
-Route::post('/product/save', [ProductController::class, 'save'])->name('products.save');
-Route::post('/product/update', [ProductController::class, 'update'])->name('products.update');
+Route::prefix('product')
+    ->name('products.')
+    ->controller(ProductController::class)
+    ->group(function () {
+        Route::get('create', 'create')->name('create');
+        Route::get('edit/{id}', 'edit')->name('edit');
+        Route::delete('delete/{id}', 'delete')->name('delete');
+        Route::post('save', 'save')->name('save');
+        Route::post('update', 'update')->name('update');
+    });
 
 // ANCHOR: rutas para insumos
-Route::get('/supplie/create', [SupplieController::class, 'create'])->name('supplies.create');
-Route::get('/supplie/edit/{id}', [SupplieController::class, 'edit'])->name('supplies.edit');
-Route::delete('/supplie/delete/{id}', [SupplieController::class, 'delete'])->name('supplies.delete');
-Route::post('/supplie/save', [SupplieController::class, 'save'])->name('supplies.save');
-Route::post('/supplie/update', [SupplieController::class, 'update'])->name('supplies.update');
+Route::prefix('supplie')
+    ->name('supplies.')
+    ->controller(SupplieController::class)
+    ->group(function () {
+        Route::get('create', 'create')->name('create');
+        Route::get('edit/{id}', 'edit')->name('edit');
+        Route::delete('delete/{id}', 'delete')->name('delete');
+        Route::post('save', 'save')->name('save');
+        Route::post('update', 'update')->name('update');
+    });
 
 // ANCHOR: rutas para ventas
-Route::get('/sale/create', [SaleController::class, 'create'])->name('sales.create');
-Route::get('/sale/edit/{id}', [SaleController::class, 'edit'])->name('sales.edit');
-Route::delete('/sale/delete/{id}', [SaleController::class, 'delete'])->name('sales.delete');
-Route::post('/sale/save', [SaleController::class, 'save'])->name('sales.save');
-Route::post('/sale/update', [SaleController::class, 'update'])->name('sales.update');
+Route::prefix('sale')
+    ->name('sales.')
+    ->controller(SaleController::class)
+    ->group(function () {
+        Route::get('create', 'create')->name('create');
+        Route::get('edit/{id}', 'edit')->name('edit');
+        Route::delete('delete/{id}', 'delete')->name('delete');
+        Route::post('save', 'save')->name('save');
+        Route::post('update', 'update')->name('update');
+    });
 
 // ANCHOR: rutas para ofertas
-Route::get('/offer/create', [OfferController::class, 'create'])->name('offers.create');
-Route::get('/offer/edit/{id}', [OfferController::class, 'edit'])->name('offers.edit');
-Route::delete('/offer/delete/{id}', [OfferController::class, 'delete'])->name('offers.delete');
-Route::post('/offer/save', [OfferController::class, 'save'])->name('offers.save');
-Route::post('/offer/update', [OfferController::class, 'update'])->name('offers.update');
+Route::prefix('offer')
+    ->name('offers.')
+    ->controller(OfferController::class)
+    ->group(function () {
+        Route::get('create', 'create')->name('create');
+        Route::get('edit/{id}', 'edit')->name('edit');
+        Route::delete('delete/{id}', 'delete')->name('delete');
+        Route::post('save', 'save')->name('save');
+        Route::post('update', 'update')->name('update');
+    });
 
 // NOTE: Rutas para filtros
 Route::post('/filter/table',[FilterController::class, 'filter'])->name('filterDate');

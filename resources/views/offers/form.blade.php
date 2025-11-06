@@ -45,9 +45,9 @@
     <input type="number" name="price" class="input-text" value="{{ $edit->price ?? '' }}" required min="0" step="0.01" placeholder="Ejemplo: 2.50">
 
     <div class="button-box">
-        <a href="{{ route('offers') }}" class="buttons button-orange" title="Volver">
+        <a href="{{ route('offers') }}" class="buttons" title="Volver">
             <i class='bx bx-arrow-back icon-small'></i>
         </a>
-        <input type="submit" value="Guardar" class="buttons button-green">
+        <input type="submit" value="Guardar" class="buttons">
     </div>
 </form>

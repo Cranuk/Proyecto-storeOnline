@@ -32,10 +32,10 @@ $route = isset($edit) ? 'paymentMethods.update' : 'paymentMethods.save';
     <input type="text" name="description" class="input-text" value="{{ $edit->description ?? '' }}">
 
     <div class="button-box">
-        <a href="{{ route('paymentMethods') }}" class="buttons button-orange" title="Volver">
+        <a href="{{ route('paymentMethods') }}" class="buttons" title="Volver">
             <i class='bx bx-arrow-back icon-small'></i>
         </a>
-        <input type="submit" value="Guardar" class="buttons button-green">
+        <input type="submit" value="Guardar" class="buttons">
     </div>
 </form>
 @endsection

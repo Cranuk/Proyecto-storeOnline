@@ -6,14 +6,23 @@ table {
 }
 
 th {
-    padding: 10px;
     color: var(--text-color-th);
     font-weight: 400;
 }
 
-td,
-td i {
+td {
+    padding: 10px;
     color: var(--text-color-input);
+
+    i {
+        color: var(--text-color-input);
+    }
+
+    div.tools {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
 }
 
 thead tr {

@@ -14,9 +14,6 @@
             <a href="{{ route('supplies.create') }}" class="buttons button-lightBlue" title="Nuevo insumo">
                 <i class='bx bx-add-to-queue icon-medium'></i>
             </a>
-            <a id="filter-button" class="buttons button-yellow" title='Filtro' data-table="supplies">
-                <i class='bx bx-filter icon-medium'></i>
-            </a>
         </div>
     </div>
 
@@ -39,16 +36,18 @@
                 <td>@formatCurrency($supplie->price)</td>
                 <td>@formatDate($supplie->created_at)</td>
                 <td>
-                    <a href="{{ route('supplies.edit', ['id'=>$supplie->id]) }}">
-                        <i class='bx bxs-edit-alt icon-small'></i>
-                    </a>
-                    <form action="{{ route('supplies.delete', ['id'=>$supplie->id]) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="delete-button" title="Eliminar medio de pago">
-                            <i class='bx bxs-trash-alt icon-small'></i>
-                        </button>
-                    </form>
+                    <div class="tools">
+                        <a href="{{ route('supplies.edit', ['id'=>$supplie->id]) }}">
+                            <i class='bx bxs-edit-alt icon-small'></i>
+                        </a>
+                        <form action="{{ route('supplies.delete', ['id'=>$supplie->id]) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="delete-button" title="Eliminar insumo">
+                                <i class='bx bxs-trash-alt icon-small'></i>
+                            </button>
+                        </form>
+                    </div>
                 </td>
             </tr>
             @endforeach

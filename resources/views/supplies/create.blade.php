@@ -35,10 +35,10 @@ $route = isset($edit) ? 'supplies.update' : 'supplies.save';
     <input type="text" name="date" class="input-text datePicker" value="{{ $dateFormat ?? '' }}" placeholder="Selecciona una fecha">
 
     <div class="button-box">
-        <a href="{{ route('supplies') }}" class="buttons button-orange" title="Volver">
+        <a href="{{ route('supplies') }}" class="buttons" title="Volver">
             <i class='bx bx-arrow-back icon-small'></i>
         </a>
-        <input type="submit" value="Guardar" class="buttons button-green">
+        <input type="submit" value="Guardar" class="buttons">
     </div>
 </form>
 @endsection

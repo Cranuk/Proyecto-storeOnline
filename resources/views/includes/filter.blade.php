@@ -12,7 +12,7 @@
                 <input type="submit" value="Aplicar" class="buttons button-lightBlue">
                 <input type="button" value="Cancelar" class="buttons button-red" id="button-cancel">
             </div>
-            
+
         </form>
     </div>
 </section>
