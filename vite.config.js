@@ -10,8 +10,9 @@ export default defineConfig({
     ],
     server: {
         host: '0.0.0.0',
+        port: 5177,
         hmr: {
-            host: 'storeonline.test', 
+            host: 'localhost', 
         }
     },
 });
