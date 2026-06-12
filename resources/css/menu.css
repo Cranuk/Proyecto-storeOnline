@@ -1,69 +1,44 @@
-.container-options {
-    padding-top: 20px;
-}
-
-.menu-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-}
-
-.menu-buttons {
-    display: inline-flex;
-    justify-content: center;
-    width: 120px;
-    padding: 10px;
-    color: #fcfaf9;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: box-shadow 0.3s;
-}
-
 nav {
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 90vh;
+    width: 300px;
     background-color: var(--background-general);
     border-right: 1px solid var(--border-color);
     overflow-y: auto;
+    padding-top: 15px;
     transition: var(--tran-05);
 }
 
 nav.close {
-    width: 73px;
+    width: 60px;
+}
+
+nav.close li a .link-name,
+nav.close .logo-title,
+nav.close .mode-toggle-btn .link-name {
+    display: none;
 }
 
 nav .logo-box {
     display: flex;
     align-items: center;
-    padding-left: 8px;
-    transition: var(--tran-05);
     cursor: pointer;
 }
 
 nav .logo-image {
     display: flex;
     justify-content: center;
-    min-width: 45px;
 }
 
-nav .logo-image img {
-    width: 40px;
-    object-fit: cover;
-}
-
-nav .logo-name {
-    margin-left: 10px;
-    font-size: 22px;
-    font-weight: 600;
+nav .logo-image span {
     color: var(--text-color);
 }
 
-nav.close .logo-name {
-    opacity: 0;
-    pointer-events: none;
+nav .logo-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+    padding-left: 10px;
 }
 
 nav .menu-items {
@@ -71,6 +46,7 @@ nav .menu-items {
     flex-direction: column;
     justify-content: space-between;
     padding-top: 20px;
+    padding-left: 10px;
 }
 
 .menu-items li a {
@@ -80,80 +56,37 @@ nav .menu-items {
     position: relative;
 }
 
-.menu-items li a i {
-    font-size: 24px;
-    min-width: 45px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--icon-color-panel);
-}
-
 .menu-items li a .link-name {
     font-size: 18px;
-    font-weight: 400;
-    color: var(--text-color);
-    transition: var(--tran-05);
-}
-
-nav.close li a .link-name {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.nav-links li a:hover i,
-.nav-links li a:hover .link-name {
-    color: var(--text-color-hover);
-}
-
-body.dark .nav-links li a:hover i,
-body.dark .nav-links li a:hover .link-name {
-    color: var(--text-color-hover);
-}
-
-.menu-items .logout-mode {
-    padding-top: 10px;
-    border-top: 1px solid var(--border-color);
-}
-
-.menu-items .mode {
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-}
-
-.menu-items .mode-toggle {
-    height: 50px;
-    min-width: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: 10px;
+}
+
+.mode-toggle-btn {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0;
     cursor: pointer;
 }
 
-.mode-toggle .switch {
-    position: relative;
-    display: inline-block;
-    height: 22px;
-    width: 40px;
-    border-radius: 25px;
-    background-color: var(--toggle-color);
+.mode-toggle-btn .link-name {
+    font-size: 18px;
+    padding-left: 10px;
 }
 
-.switch:before {
-    content: "";
-    position: absolute;
-    left: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 15px;
-    width: 15px;
-    background-color: var(--background-general);
-    border-radius: 50%;
-    transition: var(--tran-03);
+.menu-items li a span,
+.mode-toggle-btn span {
+    color: var(--icon-color-panel);
 }
 
-body.dark .switch:before {
-    left: 20px;
+.nav-links li a:hover span,
+.nav-links li a:hover .link-name,
+.mode-toggle-btn:hover span,
+body.dark .nav-links li a:hover span,
+body.dark .nav-links li a:hover .link-name,
+body.dark .mode-toggle-btn:hover span {
+    color: var(--text-color-hover);
 }
