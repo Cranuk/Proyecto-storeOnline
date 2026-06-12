@@ -6,19 +6,21 @@
 <section class="section">
     <div class="section-content">
         <div class="title">
-            <i class='bx bx-home-circle'></i>
+            <span class="material-symbols-outlined">
+                point_of_sale
+            </span>
             <span class="text">Ventas:</span>
         </div>
 
         <div class="button-box">
-            <a href="{{ route('sales.create')}}" class="buttons button-lightBlue" title="Nueva venta">
-                <i class='bx bx-add-to-queue icon-medium'></i>
+            <a href="{{ route('sales.create')}}" class="buttons" title="Nueva venta">
+                <span class="material-symbols-outlined icon-small">add_box</span>
             </a>
             <a id="filter-button" class="buttons button-yellow" title='Filtro' data-table="sales">
-                <i class='bx bx-filter icon-medium'></i>
+                <span class="material-symbols-outlined icon-small">filter_alt</span>
             </a>
-            <a id="report-button" class="buttons button-red" title='Generar reporte' data-table="sales">
-                <i class='bx bxs-file-pdf icon-medium'></i>
+            <a id="report-button" class="buttons" title='Generar reporte' data-table="sales">
+                <span class="material-symbols-outlined icon-small">description</span>
             </a>
         </div>
     </div>
@@ -43,7 +45,7 @@
             <tr>
                 <td>
                     @isset($sale->offer->name)
-                    <i class='bx bxs-offer alert-offer' title="Oferta"></i>
+                    <span class="material-symbols-outlined alert-offer" title="Oferta">percent_discount</span>
                     {{ $sale->offer->name }}
                     @else
                     {{ $sale->product->name }}
@@ -60,7 +62,7 @@
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="delete-button" title="Cancelar venta">
-                                <i class='bx bxs-trash-alt icon-small'></i>
+                                <span class="material-symbols-outlined icon-small">delete</span>
                             </button>
                         </form>
                     </div>
@@ -72,7 +74,7 @@
     @else
     <div class="alert-box">
         <div class="alert alert-notice">
-            <i class='bx bxs-info-square icon-head icon-medium'></i>
+            <span class="material-symbols-outlined icon-head icon-medium icon-material">info</span>
             No hay ventas registradas en el mes!!!
         </div>
     </div>

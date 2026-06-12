@@ -1,14 +1,14 @@
 :root {
     /* == Background-color == */
-    --background-general: #faf9f9;
+    --background-general: #fefcf3;
     --background-footer: #333333;
     --background-icon-color: #282C34;
     --background-table-color: #282C34;
     --background-row-table1: #c8c9cd;
     --background-row-table2: #e3e3e6;
     --box1-color: #e1e5f2;
-    --box2-color: #ef233c;
-    --box3-color: #1e88e5;
+    --box2-color: #f098a7;
+    --box3-color: #98c6e7;
 
     /* ===== Text-color =====*/
     --text-color: #282C34;
@@ -22,11 +22,12 @@
     --icon-color-title: #f9f7f3;
     --icon-color-panel: #282C34;
     --icon-color-link: #ffb200;
-    --icon-color-alert: #780000;
+    --icon-color-alert: #ef233c;
 
     /* === Border-color === */
     --border-color: #282C34;
-    --border-shadow: rgba(0, 0, 0, 0.1);
+    --border-form-color: #d5dfeb;
+    --border-shadow: rgba(0, 0, 0, 0.4);
 
     /* == Switch-color */
     --toggle-color: #707070;
@@ -49,7 +50,7 @@ body.dark {
 
     /* === Border-color === */
     --border-color: #f9f7f3;
-    --border-shadow: rgba(255, 255, 255, 0.1);
+    --border-shadow: rgba(255, 255, 255, 0.4);
 
     /* === Icon-color === */
     --icon-color-title: #f9f7f3;

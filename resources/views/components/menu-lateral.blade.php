@@ -21,7 +21,7 @@
             <li>
                 <a href="{{ route('sales') }}" title="Ventas">
                     <span class="material-symbols-outlined icon-medium">
-                        shopping_cart
+                        point_of_sale
                     </span>
                     <span class="link-name">Ventas</span>
                 </a>

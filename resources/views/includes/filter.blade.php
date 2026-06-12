@@ -9,8 +9,8 @@
             <div class="space-10"></div>
 
             <div class="button-box">
-                <input type="submit" value="Aplicar" class="buttons button-lightBlue">
-                <input type="button" value="Cancelar" class="buttons button-red" id="button-cancel">
+                <input type="submit" value="Aplicar" class="buttons">
+                <input type="button" value="Cancelar" class="buttons" id="button-cancel">
             </div>
 
         </form>

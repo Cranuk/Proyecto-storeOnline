@@ -29,6 +29,8 @@ class PanelController
 
     public function supplies(){
         $supplies = Supplie::orderBy('created_at', 'desc')
+                ->whereYear('created_at', Carbon::now()->year)
+                ->orderBy('created_at', 'desc')
                 ->paginate(10);
         $count = $supplies->count();
 

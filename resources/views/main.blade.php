@@ -6,20 +6,20 @@
 <section class="dashboard">
     <div class="dash-content">
         <div class="title">
-            <i class='bx bx-home-circle'></i>
+            <span class="material-symbols-outlined icon-material">analytics</span>
             <span class="title-text">Dashboard</span>
         </div>
 
         <div class="boxes">
             @foreach($payMethod as $data)
             <div class="box box1">
-                <i class='bx bx-money'></i>
+                <span class="material-symbols-outlined icon-material">payments</span>
                 <p class="boxes-text">Total en {{$data->name}}</p>
                 <p class="number">@getBalancePositive($data->id)</p>
             </div>
             @endforeach
             <div class="box box1">
-                <i class='bx bx-money'></i>
+                <span class="material-symbols-outlined icon-material">finance_chip</span>
                 <p class="boxes-text">Total en ventas</p>
                 <p class="number">@getBalancePositive()</p>
             </div>
@@ -27,12 +27,12 @@
 
         <div class="boxes">
             <div class="box box2">
-                <i class='bx bx-shopping-bag'></i>
+                <span class="material-symbols-outlined icon-material">shopping_bag</span>
                 <p class="boxes-text">Total en insumos</p>
                 <p class="number">@getBalanceNegative()</p>
             </div>
             <div class="box box3">
-                <i class='bx bx-line-chart'></i>
+                <span class="material-symbols-outlined icon-material">bar_chart</span>
                 <p class="boxes-text">Balance general</p>
                 <p class="number">@getBalance()</p>
             </div>
@@ -40,7 +40,7 @@
 
         <div class="activity">
             <div class="title">
-                <i class='bx bx-book-content'></i>
+                <span class="material-symbols-outlined icon-material">book</span>
                 <p class="title-text">Ultimas ventas</p>
             </div>
 
@@ -61,7 +61,7 @@
                     <tr>
                         <td>
                             @isset($sale->offer->name)
-                            <i class='bx bxs-offer alert-offer' title="Oferta"></i>
+                            <span class="material-symbols-outlined alert-offer" title="Producto en oferta">percent_discount</span>
                             {{ $sale->offer->name }}
                             @else
                             {{ $sale->product->name }}
@@ -80,7 +80,7 @@
             @else
             <div class="alert-box">
                 <div class="alert alert-notice">
-                    <i class='bx bxs-info-square icon-head icon-medium'></i>
+                    <span class="material-symbols-outlined icon-head icon-medium icon-material">info</span>
                     No hay ventas registradas en el mes!!!
                 </div>
             </div>

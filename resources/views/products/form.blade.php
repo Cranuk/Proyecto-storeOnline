@@ -1,46 +1,48 @@
-<form action="{{ route($route)}}" method="POST" class="form-style">
-    @csrf
+<div class="flex justify-center">
+    <form action="{{ route($route)}}" method="POST" class="form-style">
+        @csrf
 
-    <div class="subtitle underlined center">
+        <div class="subtitle underlined center">
+            @isset($edit)
+            Editar producto
+            @else
+            Nuevo producto
+            @endisset
+        </div>
+
+        <div class="space-10"></div>
+
         @isset($edit)
-        Editar producto
-        @else
-        Nuevo producto
+        <input type="hidden" name="id" value="{{ $edit->id }}">
         @endisset
-    </div>
 
-    <div class="space-10"></div>
+        <label for="name" class="label-text">Nombre:</label>
+        <input type="text" name="name" class="input-text" value="{{ $edit->name ?? '' }}" required>
 
-    @isset($edit)
-    <input type="hidden" name="id" value="{{ $edit->id }}">
-    @endisset
+        <label for="type_unit" class="label-text">Seleccione tipo de medida:</label>
+        <select name="type_unit" class="input-select" required>
+            <option value="">Tipo de medida</option>
+            <option value="kg" @isset($edit) {{ 'kg' == $edit->type_unit ? 'selected' : '' }} @endisset>Peso(kg)</option>
+            <option value="u" @isset($edit) {{ 'u' == $edit->type_unit ? 'selected' : '' }} @endisset>Unidad(u)</option>
+        </select>
 
-    <label for="name" class="label-text">Nombre:</label>
-    <input type="text" name="name" class="input-text" value="{{ $edit->name ?? '' }}" required>
+        <label for="amount" class="label-text">Cantidad:</label>
+        <input type="number" name="amount" class="input-text" value="{{ $edit->amount ?? '' }}" required min="0" step="0.001" placeholder="Ejemplo: 2.500">
 
-    <label for="description" class="label-text">Descripcion:</label>
-    <input type="text" name="description" class="input-text" value="{{ $edit->description ?? '' }}">
+        <label for="minimal_amount" class="label-text">Cantidad minima:</label>
+        <input type="number" name="minimal_amount" class="input-text" value="{{ $edit->minimal_amount ?? '' }}" required min="0" step="0.001" placeholder="Ejemplo: 2.500">
 
-    <label for="amount" class="label-text">Cantidad:</label>
-    <input type="number" name="amount" class="input-text" value="{{ $edit->amount ?? '' }}" required min="0" step="0.001" placeholder="Ejemplo: 2.500">
+        <label for="price" class="label-text">Precio:</label>
+        <input type="number" name="price" class="input-text" value="{{ $edit->price ?? '' }}" required min="0" step="0.01" placeholder="Ejemplo: 2.50">
 
-    <label for="minimal_amount" class="label-text">Cantidad minima:</label>
-    <input type="number" name="minimal_amount" class="input-text" value="{{ $edit->minimal_amount ?? '' }}" required min="0" step="0.001" placeholder="Ejemplo: 2.500">
+        <label for="description" class="label-text">Descripcion:</label>
+        <textarea name="description" class="input-textarea" cols="29" rows="5" required>{{ $edit->description ?? '' }}</textarea>
 
-    <label for="type_unit" class="label-text">Seleccione tipo de medida:</label>
-    <select name="type_unit" class="input-select" required>
-        <option value="">Tipo de medida</option>
-        <option value="kg" @isset($edit) {{ 'kg' == $edit->type_unit ? 'selected' : '' }} @endisset>Peso(kg)</option>
-        <option value="u" @isset($edit) {{ 'u' == $edit->type_unit ? 'selected' : '' }} @endisset>Unidad(u)</option>
-    </select>
-
-    <label for="price" class="label-text">Precio:</label>
-    <input type="number" name="price" class="input-text" value="{{ $edit->price ?? '' }}" required min="0" step="0.01" placeholder="Ejemplo: 2.50">
-
-    <div class="button-box">
-        <a href="{{ route('products') }}" class="buttons" title="Volver">
-            <i class='bx bx-arrow-back icon-small'></i>
-        </a>
-        <input type="submit" value="Guardar" class="buttons">
-    </div>
-</form>
+        <div class="button-box">
+            <a href="{{ route('products') }}" class="buttons" title="Volver">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </a>
+            <input type="submit" value="Guardar" class="buttons">
+        </div>
+    </form>
+</div>

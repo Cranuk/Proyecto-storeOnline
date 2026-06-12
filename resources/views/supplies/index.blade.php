@@ -6,13 +6,15 @@
 <section class="section">
     <div class="section-content">
         <div class="title">
-            <i class='bx bx-home-circle'></i>
+            <span class="material-symbols-outlined">
+                trolley
+            </span>
             <span class="text">Insumos:</span>
         </div>
 
         <div class="button-box">
-            <a href="{{ route('supplies.create') }}" class="buttons button-lightBlue" title="Nuevo insumo">
-                <i class='bx bx-add-to-queue icon-medium'></i>
+            <a href="{{ route('supplies.create') }}" class="buttons" title="Nuevo insumo">
+                <span class="material-symbols-outlined icon-small">add_box</span>
             </a>
         </div>
     </div>
@@ -38,13 +40,13 @@
                 <td>
                     <div class="tools">
                         <a href="{{ route('supplies.edit', ['id'=>$supplie->id]) }}">
-                            <i class='bx bxs-edit-alt icon-small'></i>
+                            <span class="material-symbols-outlined icon-small">edit</span>
                         </a>
                         <form action="{{ route('supplies.delete', ['id'=>$supplie->id]) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="delete-button" title="Eliminar insumo">
-                                <i class='bx bxs-trash-alt icon-small'></i>
+                                <span class="material-symbols-outlined icon-small">delete</span>
                             </button>
                         </form>
                     </div>
@@ -56,7 +58,7 @@
     @else
     <div class="alert-box">
         <div class="alert alert-notice">
-            <i class='bx bxs-info-square icon-head icon-medium'></i>
+            <span class="material-symbols-outlined icon-head icon-medium icon-material">info</span>
             No hay insumos agregados!!!
         </div>
     </div>

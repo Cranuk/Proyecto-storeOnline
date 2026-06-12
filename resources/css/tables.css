@@ -11,12 +11,8 @@ th {
 }
 
 td {
-    padding: 10px;
+    padding: 5px;
     color: var(--text-color-input);
-
-    i {
-        color: var(--text-color-input);
-    }
 
     div.tools {
         display: flex;
@@ -41,16 +37,15 @@ tbody tr:nth-child(odd) {
 
 .alert-amount {
     display: inline-block;
-}
-
-i.alert-amount {
     color: var(--icon-color-alert);
     font-size: 1.5rem;
     font-weight: 400;
+    vertical-align: bottom;
 }
 
-i.alert-offer {
+.alert-offer {
     color: var(--background-icon-color);
     font-size: 1.5rem;
     font-weight: 400;
+    vertical-align: bottom;
 }

@@ -6,13 +6,15 @@
 <section class="section">
     <div class="section-content">
         <div class="title">
-            <i class='bx bx-home-circle'></i>
+            <span class="material-symbols-outlined">
+                payments
+            </span>
             <span class="text">Medios de pago:</span>
         </div>
 
         <div class="button-box">
-            <a href="{{ route('paymentMethods.create') }}" class="buttons button-lightBlue" title="Nuevo medio de pago">
-                <i class='bx bx-add-to-queue icon-medium'></i>
+            <a href="{{ route('paymentMethods.create') }}" class="buttons" title="Nuevo medio de pago">
+                <span class="material-symbols-outlined icon-small">add_box</span>
             </a>
         </div>
     </div>
@@ -36,13 +38,13 @@
                 <td>
                     <div class="tools">
                         <a href="{{ route('paymentMethods.edit', ['id'=>$methodPay->id]) }}">
-                            <i class='bx bxs-edit-alt icon-small'></i>
+                            <span class="material-symbols-outlined icon-small">edit</span>
                         </a>
                         <form action="{{ route('paymentMethods.delete', ['id'=>$methodPay->id]) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="delete-button" title="Eliminar medio de pago">
-                                <i class='bx bxs-trash-alt icon-small'></i>
+                                <span class="material-symbols-outlined icon-small">delete</span>
                             </button>
                         </form>
                     </div>
@@ -54,7 +56,7 @@
     @else
     <div class="alert-box">
         <div class="alert alert-notice">
-            <i class='bx bxs-info-square icon-head icon-medium'></i>
+            <span class="material-symbols-outlined icon-head icon-big icon-material">info</span>
             No hay medios de pagos registrados!!!
         </div>
     </div>

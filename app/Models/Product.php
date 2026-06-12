@@ -12,6 +12,11 @@ class Product extends Model
     // Si el nombre de la tabla no sigue la convención (plural en inglés), especifícalo:
     protected $table = 'products';
 
+    protected $casts = [
+        'amount' => 'integer',
+        'minimal_amount' => 'integer',
+    ];
+
     // Definir relación con el modelo Sale
     public function sales(){
         return $this->hasMany(Sale::class, 'product_id'); // 'product_id' es la clave foránea en la tabla 'sales'

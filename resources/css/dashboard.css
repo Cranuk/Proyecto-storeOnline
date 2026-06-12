@@ -7,7 +7,7 @@
     display: flex;
 }
 
-.dash-content .title i {
+.dash-content .title .icon-material {
     position: relative;
     height: 35px;
     width: 35px;
@@ -42,7 +42,7 @@
     transition: var(--tran-05);
 }
 
-.boxes .box i {
+.boxes .box .icon-material {
     font-size: 2rem;
     color: var(--text-color);
 }
@@ -60,6 +60,7 @@
     width: 20%;
     text-align: center;
     padding: 10px 10px;
+    box-shadow: 0 1px 2px 1px var(--border-shadow);
 }
 
 .boxes .box.box2 {

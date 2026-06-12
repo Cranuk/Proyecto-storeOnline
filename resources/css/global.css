@@ -7,13 +7,11 @@
 }
 
 body {
-    display: flex;
     font-family: 'Inter', sans-serif;
     background-color: var(--background-general);
 }
 
 main {
-    display: flex;
     transition: var(--tran-05);
 }
 
@@ -66,7 +64,6 @@ ul {
 
 .subtitle {
     font-size: 1.8rem;
-    color: var(--text-color);
 }
 
 .underlined {
@@ -93,11 +90,11 @@ ul {
 
 .alert-notice {
     color: var(--text-color);
-    background-color: var(--background-general);
+    background-color: var(--box1-color);
     border-radius: 10px;
-    padding: 40px 5px;
+    padding: 20px 10px;
     margin: 20px 10px;
-    box-shadow: 0 4px 4px var(--border-shadow);
+    box-shadow: 0 1px 2px 1px var(--border-shadow);
 }
 
 .button-box {
@@ -154,7 +151,7 @@ ul {
     margin: 10px 0px;
 }
 
-.section-content .title i {
+.section-content .title .material-symbols-outlined {
     height: 35px;
     width: 35px;
     background-color: var(--background-icon-color);

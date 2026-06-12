@@ -6,13 +6,15 @@
 <section class="section">
     <div class="section-content">
         <div class="title">
-            <i class='bx bx-home-circle'></i>
+            <span class="material-symbols-outlined">
+                percent_discount
+            </span>
             <span class="text">Ofertas vigentes:</span>
         </div>
 
         <div class="button-box">
-            <a href="{{ route('offers.create') }}" class="buttons button-lightBlue" title="Nueva oferta">
-                <i class='bx bx-add-to-queue icon-medium'></i>
+            <a href="{{ route('offers.create') }}" class="buttons" title="Nueva oferta">
+                <span class="material-symbols-outlined icon-small">add_box</span>
             </a>
         </div>
     </div>
@@ -40,13 +42,13 @@
                 <td>
                     <div class="tools">
                         <a href="{{ route('offers.edit', ['id'=>$offer->id]) }}">
-                            <i class='bx bxs-edit-alt icon-small'></i>
+                            <span class="material-symbols-outlined icon-small" title="Editar oferta">edit</span>
                         </a>
                         <form action="{{ route('offers.delete', ['id'=>$offer->id]) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="delete-button" title="Eliminar medio de pago">
-                                <i class='bx bxs-trash-alt icon-small'></i>
+                                <span class="material-symbols-outlined icon-small">delete</span>
                             </button>
                         </form>
                     </div>
@@ -58,7 +60,7 @@
     @else
     <div class="alert-box">
         <div class="alert alert-notice">
-            <i class='bx bxs-info-square icon-head icon-medium'></i>
+            <span class="material-symbols-outlined icon-head icon-medium icon-material">info</span>
             No hay ofertas agregadas!!!
         </div>
     </div>

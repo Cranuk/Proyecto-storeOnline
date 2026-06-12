@@ -8,37 +8,39 @@ $route = isset($edit) ? 'supplies.update' : 'supplies.save';
 @section('title', $title)
 
 @section('content-supplies')
-<form action="{{ route($route)}}" method="POST" class="form-style">
-    @csrf
+<div class="flex justify-center">
+    <form action="{{ route($route)}}" method="POST" class="form-style">
+        @csrf
 
-    <div class="subtitle underlined center">
+        <div class="subtitle underlined center">
+            @isset($edit)
+            Editar insumo
+            @else
+            Nuevo insumo
+            @endisset
+        </div>
+
+        <div class="space-10"></div>
+
         @isset($edit)
-        Editar insumo
-        @else
-        Nuevo insumo
+        <input type="hidden" name="id" value="{{ $edit->id }}">
         @endisset
-    </div>
 
-    <div class="space-10"></div>
+        <label for="name" class="label-text">Nombre:</label>
+        <input type="text" name="name" class="input-text" value="{{ $edit->name ?? '' }}" required>
 
-    @isset($edit)
-    <input type="hidden" name="id" value="{{ $edit->id }}">
-    @endisset
+        <label for="price" class="label-text">Precio:</label>
+        <input type="number" name="price" class="input-text" value="{{ $edit->price ?? '' }}" required min="0" step="0.01" placeholder="Ejemplo: 2.50">
 
-    <label for="name" class="label-text">Nombre:</label>
-    <input type="text" name="name" class="input-text" value="{{ $edit->name ?? '' }}" required>
+        <label for="date" class="label-text">Fecha:</label>
+        <input type="text" name="date" class="input-text datePicker" value="{{ $dateFormat ?? '' }}" placeholder="Selecciona una fecha">
 
-    <label for="price" class="label-text">Precio:</label>
-    <input type="number" name="price" class="input-text" value="{{ $edit->price ?? '' }}" required min="0" step="0.01" placeholder="Ejemplo: 2.50">
-
-    <label for="date" class="label-text">Fecha:</label>
-    <input type="text" name="date" class="input-text datePicker" value="{{ $dateFormat ?? '' }}" placeholder="Selecciona una fecha">
-
-    <div class="button-box">
-        <a href="{{ route('supplies') }}" class="buttons" title="Volver">
-            <i class='bx bx-arrow-back icon-small'></i>
-        </a>
-        <input type="submit" value="Guardar" class="buttons">
-    </div>
-</form>
+        <div class="button-box">
+            <a href="{{ route('supplies') }}" class="buttons" title="Volver">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </a>
+            <input type="submit" value="Guardar" class="buttons">
+        </div>
+    </form>
+</div>
 @endsection
