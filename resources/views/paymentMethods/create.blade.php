@@ -33,10 +33,10 @@ $route = isset($edit) ? 'paymentMethods.update' : 'paymentMethods.save';
         <textarea name="description" class="input-textarea" cols="29" rows="5" required>{{ $edit->description ?? '' }}</textarea>
 
         <div class="button-box">
-            <a href="{{ route('paymentMethods') }}" class="buttons" title="Volver">
+            <a href="{{ route('paymentMethods') }}" class="buttons hover:bg-amber-600 hover:text-zinc-900 duration-300" title="Volver">
                 <span class="material-symbols-outlined">arrow_back</span>
             </a>
-            <input type="submit" value="Guardar" class="buttons">
+            <input type="submit" value="Guardar" class="buttons hover:bg-green-600 hover:text-zinc-900 duration-300">
         </div>
     </form>
 </div>

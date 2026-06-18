@@ -11,14 +11,6 @@ body {
     background-color: var(--background-general);
 }
 
-main {
-    transition: var(--tran-05);
-}
-
-main.main-close {
-    transition: var(--tran-05);
-}
-
 a {
     text-decoration: none;
 }
@@ -142,7 +134,6 @@ ul {
 .section {
     width: 100%;
     padding: 0px 20px;
-    transition: var(--tran-05);
 }
 
 .section-content .title {

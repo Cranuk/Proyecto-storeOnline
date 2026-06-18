@@ -1,6 +1,6 @@
 <section class="section-modal" id="filter-modal">
     <div class="box-modal">
-        <form id="filter-form" class="form-modal" method="POST">
+        <form id="filter-form" method="POST">
             @csrf
             <input type="hidden" id="table" name="table">
             <label for="date" class="label-text">Fecha:</label>
@@ -9,8 +9,12 @@
             <div class="space-10"></div>
 
             <div class="button-box">
-                <input type="submit" value="Aplicar" class="buttons">
-                <input type="button" value="Cancelar" class="buttons" id="button-cancel">
+                <button type="button" id="button-cancel">
+                    <span class="material-symbols-outlined icon-medium hover:text-red-600 duration-300">cancel</span>
+                </button>
+                <button type="submit">
+                    <span class="material-symbols-outlined icon-medium hover:text-green-600 duration-300">check_circle</span>
+                </button>
             </div>
 
         </form>

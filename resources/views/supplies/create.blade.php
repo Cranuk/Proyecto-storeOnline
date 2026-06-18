@@ -36,10 +36,10 @@ $route = isset($edit) ? 'supplies.update' : 'supplies.save';
         <input type="text" name="date" class="input-text datePicker" value="{{ $dateFormat ?? '' }}" placeholder="Selecciona una fecha">
 
         <div class="button-box">
-            <a href="{{ route('supplies') }}" class="buttons" title="Volver">
+            <a href="{{ route('supplies') }}" class="buttons hover:bg-amber-600 hover:text-zinc-900 duration-300" title="Volver">
                 <span class="material-symbols-outlined">arrow_back</span>
             </a>
-            <input type="submit" value="Guardar" class="buttons">
+            <input type="submit" value="Guardar" class="buttons hover:bg-green-600 hover:text-zinc-900 duration-300">
         </div>
     </form>
 </div>

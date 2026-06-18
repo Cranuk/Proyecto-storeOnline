@@ -56,10 +56,10 @@
         </div>
 
         <div class="button-box">
-            <a href="{{ route('sales') }}" class="buttons" title="Volver">
+            <a href="{{ route('sales') }}" class="buttons hover:bg-amber-600 hover:text-zinc-900 duration-300" title="Volver">
                 <span class="material-symbols-outlined">arrow_back</span>
             </a>
-            <input type="submit" value="Guardar" class="buttons">
+            <input type="submit" value="Guardar" class="buttons hover:bg-green-600 hover:text-zinc-900 duration-300">
         </div>
     </form>
 </div>

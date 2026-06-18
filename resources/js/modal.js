@@ -16,6 +16,8 @@ window.addEventListener('load', function(){
 
     buttonCancel.on('click', function() {
         modal.removeClass('open-modal').addClass('hide-modal');
+        form.attr('action', '');
+        tableFilter.val('');
     });
 
     filter.on('click', function(){ // NOTE: si hace click a este enlace obtenes el data-table y le indicas que debe hacer con la info del modal

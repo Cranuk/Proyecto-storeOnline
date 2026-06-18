@@ -1,5 +1,4 @@
 .dashboard {
-    transition: var(--tran-05);
     width: 100%;
 }
 
@@ -39,7 +38,6 @@
     flex-direction: column;
     border-radius: 12px;
     background-color: var(--box1-color);
-    transition: var(--tran-05);
 }
 
 .boxes .box .icon-material {

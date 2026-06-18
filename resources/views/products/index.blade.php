@@ -13,7 +13,7 @@
         </div>
 
         <div class="button-box">
-            <a href="{{ route('products.create') }}" class="buttons" title="Nuevo producto">
+            <a href="{{ route('products.create') }}" class="buttons hover:bg-green-600 hover:text-zinc-900 duration-300" title="Nuevo producto">
                 <span class="material-symbols-outlined icon-small">add_box</span>
             </a>
         </div>
@@ -48,14 +48,14 @@
                 <td>@formatAmount($product->amount, $product->type_unit)</td>
                 <td>
                     <div class="tools">
-                        <a href="{{ route('products.edit', ['id'=>$product->id]) }}">
-                            <span class="material-symbols-outlined icon-small">edit</span>
+                        <a href="{{ route('products.edit', ['id'=>$product->id]) }}" title="Editar producto">
+                            <span class="material-symbols-outlined icon-small hover:text-amber-600 duration-300">edit</span>
                         </a>
                         <form action="{{ route('products.delete', ['id'=>$product->id]) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="delete-button" title="Eliminar medio de pago">
-                                <span class="material-symbols-outlined icon-small">delete</span>
+                            <button type="submit" class="delete-button" title="Eliminar producto">
+                                <span class="material-symbols-outlined icon-small hover:text-red-600 duration-300">delete</span>
                             </button>
                         </form>
                     </div>

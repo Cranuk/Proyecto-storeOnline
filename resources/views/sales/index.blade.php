@@ -13,13 +13,13 @@
         </div>
 
         <div class="button-box">
-            <a href="{{ route('sales.create')}}" class="buttons" title="Nueva venta">
+            <a href="{{ route('sales.create')}}" class="buttons hover:bg-green-600 hover:text-zinc-900 duration-300" title="Nueva venta">
                 <span class="material-symbols-outlined icon-small">add_box</span>
             </a>
-            <a id="filter-button" class="buttons button-yellow" title='Filtro' data-table="sales">
+            <a id="filter-button" class="buttons hover:bg-yellow-600 hover:text-zinc-900 duration-300" title='Filtrar por fecha' data-table="sales">
                 <span class="material-symbols-outlined icon-small">filter_alt</span>
             </a>
-            <a id="report-button" class="buttons" title='Generar reporte' data-table="sales">
+            <a id="report-button" class="buttons hover:bg-purple-600 hover:text-zinc-900 duration-300" title='Generar reporte' data-table="sales">
                 <span class="material-symbols-outlined icon-small">description</span>
             </a>
         </div>
@@ -61,7 +61,7 @@
                         <form action="{{ route('sales.delete', ['id'=>$sale->id]) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="delete-button" title="Cancelar venta">
+                            <button type="submit" class="delete-button hover:text-red-600 duration-300" title="Cancelar venta">
                                 <span class="material-symbols-outlined icon-small">delete</span>
                             </button>
                         </form>

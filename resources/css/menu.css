@@ -6,7 +6,7 @@ nav {
     border-right: 1px solid var(--border-color);
     overflow-y: auto;
     padding-top: 15px;
-    transition: var(--tran-05);
+    transition: var(--tran-03);
 }
 
 nav.close {

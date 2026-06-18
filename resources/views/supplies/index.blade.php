@@ -13,7 +13,7 @@
         </div>
 
         <div class="button-box">
-            <a href="{{ route('supplies.create') }}" class="buttons" title="Nuevo insumo">
+            <a href="{{ route('supplies.create') }}" class="buttons hover:bg-green-600 hover:text-zinc-900 duration-300" title="Nuevo insumo">
                 <span class="material-symbols-outlined icon-small">add_box</span>
             </a>
         </div>
@@ -39,14 +39,14 @@
                 <td>@formatDate($supplie->created_at)</td>
                 <td>
                     <div class="tools">
-                        <a href="{{ route('supplies.edit', ['id'=>$supplie->id]) }}">
-                            <span class="material-symbols-outlined icon-small">edit</span>
+                        <a href="{{ route('supplies.edit', ['id'=>$supplie->id]) }}" title="Editar insumo">
+                            <span class="material-symbols-outlined icon-small hover:text-amber-600 duration-300">edit</span>
                         </a>
                         <form action="{{ route('supplies.delete', ['id'=>$supplie->id]) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="delete-button" title="Eliminar insumo">
-                                <span class="material-symbols-outlined icon-small">delete</span>
+                                <span class="material-symbols-outlined icon-small hover:text-red-600 duration-300">delete</span>
                             </button>
                         </form>
                     </div>

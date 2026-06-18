@@ -13,7 +13,7 @@
         </div>
 
         <div class="button-box">
-            <a href="{{ route('paymentMethods.create') }}" class="buttons" title="Nuevo medio de pago">
+            <a href="{{ route('paymentMethods.create') }}" class="buttons hover:text-zinc-900 hover:bg-green-600 duration-300" title="Nuevo medio de pago">
                 <span class="material-symbols-outlined icon-small">add_box</span>
             </a>
         </div>
@@ -37,14 +37,14 @@
                 <td>{{ $methodPay->description }}</td>
                 <td>
                     <div class="tools">
-                        <a href="{{ route('paymentMethods.edit', ['id'=>$methodPay->id]) }}">
-                            <span class="material-symbols-outlined icon-small">edit</span>
+                        <a href="{{ route('paymentMethods.edit', ['id'=>$methodPay->id]) }}" title="Editar medio de pago">
+                            <span class="material-symbols-outlined icon-small hover:text-amber-600 duration-300">edit</span>
                         </a>
                         <form action="{{ route('paymentMethods.delete', ['id'=>$methodPay->id]) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="delete-button" title="Eliminar medio de pago">
-                                <span class="material-symbols-outlined icon-small">delete</span>
+                                <span class="material-symbols-outlined icon-small hover:text-red-600 duration-300">delete</span>
                             </button>
                         </form>
                     </div>
