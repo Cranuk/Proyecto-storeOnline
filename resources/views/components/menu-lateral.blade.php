@@ -11,11 +11,11 @@
     <div class="menu-items">
         <ul class="nav-links">
             <li>
-                <a href="/" title="Dashboard">
+                <a href="{{ route('main') }}" title="Dashboard">
                     <span class="material-symbols-outlined icon-medium">
                         analytics
                     </span>
-                    <span class="link-name">Tablero</span>
+                    <span class="link-name duration-300 {{ request()->routeIs('main') ? 'underline underline-offset-4 decoration-2 cursor-not-allowed' : '' }}">Tablero</span>
                 </a>
             </li>
             <li>
@@ -23,7 +23,7 @@
                     <span class="material-symbols-outlined icon-medium">
                         point_of_sale
                     </span>
-                    <span class="link-name">Ventas</span>
+                    <span class="link-name duration-300 {{ request()->routeIs('sales', 'sales.*') ? 'underline underline-offset-4 decoration-2 cursor-not-allowed' : '' }}">Ventas</span>
                 </a>
             </li>
             <li>
@@ -31,7 +31,7 @@
                     <span class="material-symbols-outlined icon-medium">
                         trolley
                     </span>
-                    <span class="link-name">Insumos</span>
+                    <span class="link-name {{ request()->routeIs('supplies', 'supplies.*') ? 'underline underline-offset-4 decoration-2 cursor-not-allowed' : '' }}">Insumos</span>
                 </a>
             </li>
             <li>
@@ -39,7 +39,7 @@
                     <span class="material-symbols-outlined icon-medium">
                         inventory_2
                     </span>
-                    <span class="link-name">Productos</span>
+                    <span class="link-name {{ request()->routeIs('products', 'products.*') ? 'underline underline-offset-4 decoration-2 cursor-not-allowed' : '' }}">Productos</span>
                 </a>
             </li>
             <li>
@@ -47,7 +47,7 @@
                     <span class="material-symbols-outlined icon-medium">
                         percent_discount
                     </span>
-                    <span class="link-name">Ofertas</span>
+                    <span class="link-name {{ request()->routeIs('offers', 'offers.*') ? 'underline underline-offset-4 decoration-2 cursor-not-allowed' : '' }}">Ofertas</span>
                 </a>
             </li>
             <li>
@@ -55,7 +55,7 @@
                     <span class="material-symbols-outlined icon-medium">
                         payments
                     </span>
-                    <span class="link-name">Medios de pago</span>
+                    <span class="link-name {{ request()->routeIs('paymentMethods', 'paymentMethods.*') ? 'underline underline-offset-4 decoration-2 cursor-not-allowedq' : '' }}">Medios de pago</span>
                 </a>
             </li>
             <li class="mode">
