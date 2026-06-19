@@ -22,8 +22,8 @@ Route::get('/offers', [PanelController::class, 'offers'])->name('offers');
 Route::get('/paymentMethod', [PanelController::class, 'paymentMethod'])->name('paymentMethods');
 
 // ANCHOR: rutas para metodos de pago
-Route::prefix('paymentMethod')
-    ->name('paymentMethods.')
+Route::prefix('paymentMethod') // ANCHOR: prefix es lo que se muestra en la URL del navegador
+    ->name('paymentMethods.') // ANCHOR: el name es como debe llamar para usar la ruta indicada en el grupo
     ->controller(PaymentMethodController::class)
     ->group(function () {
         Route::get('create', 'create')->name('create');
